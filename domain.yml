@@ -1,0 +1,151 @@
+version: '3.1'
+intents:
+- affirm
+- ask_media
+- bcci
+- bot_challenge
+- cook
+- cricket
+- deletesearch
+- deny
+- elon
+- give_time
+- goodbye
+- greet
+- icc
+- inform
+- legend
+- mac
+- mood_great
+- mood_unhappy
+- phone
+- request_media_form
+- search
+- spacex
+- stop
+- tesla
+- vada
+entities:
+- media_text
+- media_type
+- media_size
+slots:
+  media_size:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: media_size
+  media_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: media_type
+  media_text:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: media_text
+forms:
+  simple_media_form:
+    required_slots:
+    - media_size
+    - media_type
+    - media_text
+actions:
+- action_cook_tweets
+- action_cricket_media
+- action_delete_search
+- action_elon_tweets
+- action_show_media
+- action_show_posts
+- action_show_search
+- action_show_time
+- utter_ask_continue
+- utter_ask_media_text
+- utter_bcci
+- utter_cricket
+- utter_greet
+- utter_icc
+- utter_media_slots
+- utter_related_cricket
+- utter_submit
+- validate_simple_media_form
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_legend:
+  - text: He is the G.O.A.T
+    image: https://images.moneycontrol.com/static-mcnews/2022/10/Collage-Maker-23-Oct-2022-06.02-PM-770x435.jpg?impolicy=website&width=770&height=431
+  utter_noob:
+  - text: He is a noob
+  utter_humour:
+  - text: Haha I was Just Kidding...
+  utter_cook:
+  - text: Recent Tweets and videos on Tim Cook
+  utter_related_cook:
+  - text: |-
+      Here are the things related to Tim Cook 
+       (1) Iphone 
+       (2) MacBook
+  utter_elon:
+  - text: 'Recent Tweets and videos on Elon Musk: '
+  utter_related_elon:
+  - text: |-
+      Here are the things related to Elon Musk 
+       (1) SpaceX 
+       (2) Tesla
+  utter_cricket:
+  - text: 'Recent Tweets and videos on Cricket: '
+  utter_related_cricket:
+  - text: |-
+      Here are the things related to Cricket 
+       (1) ICC 
+       (2) BCCI
+       (3) IPL
+  utter_spacex:
+  - text: Here are the recent tweets and videos on SpaceX
+  utter_phone:
+  - text: Here are the recent tweets and videos on Iphone
+  utter_mac:
+  - text: Here are the recent tweets and videos on MacBook
+  utter_tesla:
+  - text: Here are the recent tweets and videos on Tesla
+  utter_submit:
+  - text: I will now send posts for you!
+  utter_media_slots:
+  - text: I will send {media_size} {media_type} post on {media_text}.
+  utter_ask_continue:
+  - text: Are you sure you want to stop the form?
+  utter_ask_media_size:
+  - text: How many posts do you want?
+  utter_ask_media_type:
+  - text: What kind of posts would you like to see?
+  utter_ask_media_text:
+  - text: On what topic would you like to see?
+  utter_search:
+  - text: Sending your search history
+  utter_deletesearch:
+  - text: I will delete your search history
+  utter_ipl:
+  - text: Here are the recent tweets and videos on IPL
+  utter_icc:
+  - text: Here are the recent tweets and videos on ICC
+  utter_bcci:
+  - text: Here are the recent tweets and videos on BCCI
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
