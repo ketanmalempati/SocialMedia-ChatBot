@@ -1,0 +1,272 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: legend
+  examples: |
+    - virat
+    - king kohli
+    - kohli
+- intent: elon
+  examples: |
+    - can I get some details on elon?
+    - can I get some details on elon musk?
+    - can I get some details on musk?
+    - can I get some more details on elon musk?
+    - elon
+    - elon musk
+    - musk
+- intent: cricket
+  examples: |
+    - can I get some details on cricket?
+    - can I get some more details on cricket?
+    - cricket
+    - details on cricket
+    - about cricket
+- intent: icc
+  examples: |
+    - can I get some details on icc?
+    - can I get some more details on icc?
+    - icc
+    - details on icc
+    - about icc
+- intent: bcci
+  examples: |
+    - can I get some details on bcci?
+    - can I get some more details on bcci?
+    - bcci
+    - details on bcci
+    - about bcci
+- intent: tesla
+  examples: |
+    - can I get some details on tesla?
+    - can I get some details on tes?
+    - can I get some details on cybertruck?
+    - can I get some more details on tesla?
+    - tesla
+    - cybertruck
+    - tes
+    - car
+    - cars
+    - truck
+    - trucks
+    - automobiles
+- intent: spacex
+  examples: |
+    - can I get some details on spacex?
+    - can I get some details on space?
+    - can I get some more details on spacex?
+    - space
+    - space x
+    - spacex
+    - spacx
+    - rockets
+- intent: phone
+  examples: |
+    - apple
+    - iphone
+    - ipad
+    - phone
+    - can I get some details on apple?
+    - can I get some details on iphone?
+- intent: cook
+  examples: |
+    - can I get some details on cook?
+    - can I get some details on tim cook?
+    - can I get some details on tim?
+    - can I get some more details on tim cook?
+    - tim
+    - tim cook
+    - cook
+- intent: mac
+  examples: |
+    - apple
+    - mac
+    - mac book
+    - laptop
+    - can I get some details on laptop?
+    - can I get some details on macbook?
+- intent: vada
+  examples: |
+    - rohit
+    - rohit sharma
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
+- intent: ask_media
+  examples: |
+    - i'd like to see a post
+    - i want a post
+    - can i see a post
+    - I'm interested in a tweet
+    - i want to see a video
+    - I'm interested in a video
+    - i want some posts
+    - i want posts
+- intent: inform
+  examples: |
+    - i'd like a [1](media_size) post on [Australia](media_text)
+    - i want [2](media_size) [twitter](media_type) posts [FIFA](media_text)
+    - [1](media_size) [youtube] video on [FIFA](media_text)
+    - [2](media_size)
+    - [yotube](media_size) [Australia](media_text)
+    - [1](media_size)
+    - [youtube](media_type) [nature](media_text)
+    - give me a [youtube](media_type) videos on [nature](media_text)
+    - [twitter](media_type) posts on [England](media_text)
+    - [3](media_size)
+    - [youtube](media_type) [England](media_text)
+    - i want a [3](media_size) posts on [Australia](media_text)
+    - [twitter](media_type) [Australia](media_text)
+    - [youtube](media_type) [PCB](media_text)
+    - [twitter](media_type) [BCCI](media_text)
+    - [youtube](media_type) [RCB](media_text)
+    - i want a [3](media_size) posts
+    - [youtube](media_type)
+    - [twitter](media_type)
+    - [RCB](media_text)
+    - [BCCI](media_text)
+    - [PCB](media_text)
+    - [Australia](media_text)
+    - [England](media_text)
+    - [Cricket](media_text)
+    - [nature](media_text)
+    - i want [3](media_size) posts
+    - on [nature](media_text)
+    - [Tweets](media_type) on [Virat Kohli](media_text)
+    - Can you give [tweets](media_type) on [Virat Kohli](media_text)
+    - [tweet](media_type) on [Virat Kohli](media_text)
+    - [tweet](media_type) [Virat Kohli](media_text)
+    - [tweet](media_type) on [Rohit](media_text)
+    - [Tweets](media_type) on [Sharma](media_text)
+    - Can you give [tweets](media_type) on [Kohli](media_text)
+    - [tweets](media_type) on [Rohit](media_text)
+    - [tweet](media_type) [Rohit](media_text)
+    - [tweets](media_type) on [RCB](media_text)
+    - [tweets](media_type) on [PCB](media_text)
+    - [tweet](media_type) on [Australia](media_text)
+    - [tweets](media_type) on [England](media_text)
+    - [tweet](media_type) on [Cricket](media_text)
+    - [tweets](media_type) on [nature](media_text)
+    - [video](media_type) on [Rohit](media_text)
+    - [videos](media_type) [tesla](media_text)
+    - [video](media_type) on [Sharma](media_text)
+    - Can you give [videos](media_type) on [Kohli](media_text)
+    - [video](media_type) [Rohit](media_text)
+    - [videos](media_type) on [RCB](media_text)
+    - [video](media_type) on [BCCI](media_text)
+    - [videos](media_type) on [PCB](media_text)
+    - [video](media_type) on [Australia](media_text)
+    - [videos](media_type) on [England](media_text)
+    - [video](media_type) on [Cricket](media_text)
+    - [videos](media_type) on [nature](media_text)
+    - [3](media_size) [twitter](media_type) posts on [england](media_text)
+    - i want [3](media_size) [videos](media_type) on [england](media_text)
+    - [3](media_size) [videos](media_type) on [england](media_text)
+- intent: search
+  examples: |
+    - i want to see my searches
+    - i want to see my history
+    - history
+    - search
+    - search history
+    - my history
+- intent: deletesearch
+  examples: |
+    - i want to delete my searches
+    - i want to delete my history
+    - delete
+    - deleted
+    - deleted history
+    - delete history
+    - delete my history
+- intent: stop
+  examples: |
+    - stop
+    - nevermind
+    - please stop
+    - i want to stop
+    - stop the form

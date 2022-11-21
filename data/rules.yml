@@ -1,0 +1,133 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: Tell the tweets
+#   steps:
+#   - intent: give_tweets
+#   - action: action_show_tweets
+
+
+
+# - rule: Show the videos
+#   steps:
+#   - intent: give_videos
+#   - action: action_show_videos
+- rule: search
+  steps:
+  - intent: search
+  - action: utter_search
+  - action: action_show_search
+
+- rule: deletesearch
+  steps:
+  - intent: deletesearch
+  - action: utter_deletesearch
+  - action: action_delete_search
+
+- rule: spacex
+  steps:
+  - intent: spacex
+  - action: utter_spacex
+  - action: action_show_media
+
+- rule: tesla
+  steps:
+  - intent: tesla
+  - action: utter_tesla
+  - action: action_show_media
+
+- rule: mac
+  steps:
+  - intent: mac
+  - action: utter_mac
+  - action: action_show_media
+
+- rule: iphone
+  steps:
+  - intent: phone
+  - action: utter_phone
+  - action: action_show_media
+
+- rule: icc
+  steps:
+  - intent: icc
+  - action: utter_icc
+  - action: action_show_media
+
+
+- rule: bcci
+  steps:
+  - intent: bcci
+  - action: utter_bcci
+  - action: action_show_media
+
+- rule: Activate Media Form
+  steps:
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+
+- rule: Submit Media Form
+  condition:
+  - active_loop: simple_media_form
+  steps:
+  - action: simple_media_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+
+- rule: Interruption in Media Form
+  condition:
+  # Condition that form is active.
+  - active_loop: simple_media_form
+  steps:
+  # This unhappy path handles the case of an intent `bot_challenge`.
+  - intent: bot_challenge
+  - action: utter_iamabot
+  # Return to form after handling the `bot_challenge` intent
+  - action: simple_media_form
+  - active_loop: simple_media_form
+
+# - rule: Activate Feedback Form
+#   steps:
+#   - intent: ask_media
+#   - action: simple_media_form
+#   - active_loop: simple_media_form
+
+# - rule: Submit Media Form
+#   condition:
+#   - active_loop: simple_media_form
+#   steps:
+#   - action: simple_media_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_submit
+#   - action: utter_media_slots
+#   - action: action_show_posts
+
+# - rule: Interruption in Media Form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: simple_media_form
+#   steps:
+#   # This unhappy path handles the case of an intent `bot_challenge`.
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+#   # Return to form after handling the `bot_challenge` intent
+#   - action: simple_media_form
+#   - active_loop: simple_media_form

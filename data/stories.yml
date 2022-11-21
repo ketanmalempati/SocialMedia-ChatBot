@@ -1,0 +1,388 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: GOAT
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: legend
+  - action: utter_legend
+  - intent: affirm
+  - action: utter_happy
+
+- story: Vada
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vada
+  - action: utter_noob
+  - action: utter_humour
+
+- story: ElonMusk path1
+  steps:
+  - intent: elon
+  - action: utter_elon
+  - action: action_elon_tweets
+  - action: utter_related_elon
+  - intent: spacex
+  - action: utter_spacex
+  - action: action_show_media
+
+  
+- story: ElonMusk path2
+  steps:
+  - intent: elon
+  - action: utter_elon
+  - action: action_elon_tweets
+  - action: utter_related_elon
+  - intent: tesla
+  - action: utter_tesla
+  - action: action_show_media
+
+
+- story: apple path1
+  steps:
+  - intent: cook
+  - action: utter_cook
+  - action: action_cook_tweets
+  - action: utter_related_cook
+  - intent: phone
+  - action: utter_phone
+  - action: action_show_media
+  
+- story: apple path2
+  steps:
+  - intent: cook
+  - action: utter_cook
+  - action: action_cook_tweets
+  - action: utter_related_cook
+  - intent: mac
+  - action: utter_mac
+  - action: action_show_media
+
+- story: path about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+- story: cricket path1
+  steps:
+  - intent: cricket
+  - action: utter_cricket
+  - action: action_cricket_media
+  - action: utter_related_cricket
+  - intent: icc
+  - action: utter_icc
+  - action: action_show_media
+
+  
+- story: cricket path2
+  steps:
+  - intent: cricket
+  - action: utter_cricket
+  - action: action_cricket_media
+  - action: utter_related_cricket
+  - intent: bcci
+  - action: utter_bcci
+  - action: action_show_media
+
+
+# - story: path about tweet
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: give_tweets
+#   - action: action_show_tweets
+
+
+# - story: path about video
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: give_videos
+#   - action: action_show_videos
+
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - requested_slot: media_size
+  - slot_was_set:
+    - media_size: 1
+  - slot_was_set:
+    - media_size: 1
+  - slot_was_set:
+    - requested_slot: media_text
+  - slot_was_set:
+    - media_text: RCB
+  - slot_was_set:
+    - media_text: RCB
+  - slot_was_set:
+    - requested_slot: media_type
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - media_type: null
+  - slot_was_set:
+    - requested_slot: media_type
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - media_type: null
+  - slot_was_set:
+    - requested_slot: media_type
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: User interrupts the form and doesn't want to continue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - intent: stop
+  - action: utter_ask_continue
+  - or: 
+    - intent: stop
+    - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - requested_slot: media_size
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: stop
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - requested_slot: media_size
+  - slot_was_set:
+    - media_size: '10'
+  - slot_was_set:
+    - media_size: '10'
+  - slot_was_set:
+    - requested_slot: media_type
+  - intent: stop
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - requested_slot: media_size
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: youtube
+  - slot_was_set:
+    - requested_slot: media_text
+  - slot_was_set:
+    - media_text: rcb
+  - slot_was_set:
+    - media_text: rcb
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - requested_slot: media_size
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - requested_slot: media_type
+  - slot_was_set:
+    - media_type: twitter
+  - slot_was_set:
+    - media_type: twitter
+  - slot_was_set:
+    - requested_slot: media_text
+  - intent: inform
+    entities:
+    - media_text: nature
+  - intent: inform
+    entities:
+    - media_text: rcb
+  - slot_was_set:
+    - media_text: rcb
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: ask_media
+  - action: simple_media_form
+  - active_loop: simple_media_form
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: twitter
+  - slot_was_set:
+    - media_text: rcb
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+- story: interactive_story_1
+  steps:
+  - intent: inform
+    entities:
+    - media_size: '3'
+    - media_type: twitter
+    - media_text: england
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: twitter
+  - slot_was_set:
+    - media_text: england
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+  - intent: inform
+    entities:
+    - media_size: '3'
+    - media_type: videos
+    - media_text: england
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: videos
+  - slot_was_set:
+    - media_text: england
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+
+- story: interactive_story_1
+  steps:
+  - intent: inform
+    entities:
+    - media_size: '3'
+    - media_type: videos
+    - media_text: england
+  - slot_was_set:
+    - media_size: '3'
+  - slot_was_set:
+    - media_type: videos
+  - slot_was_set:
+    - media_text: england
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts
+
+- story: search
+  steps:
+  - intent: search
+  - action: utter_search
+  - action: action_show_search
+
+- story: cleansearch
+  steps:
+  - intent: deletesearch
+  - action: utter_deletesearch
+  - action: action_delete_search
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cricket
+  - action: utter_cricket
+  - action: action_cricket_media
+  - action: utter_related_cricket
+  - intent: bcci
+  - action: utter_bcci
+  - action: action_show_media
+  - intent: icc
+  - action: utter_icc
+  - action: action_show_media

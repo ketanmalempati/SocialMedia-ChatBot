@@ -1,6 +1,0 @@
-[
-  {
-    "name": "item",
-    "pattern": "(\\bvirat\\b|\\bvirat\\ kohli\\b|\\bkohli\\b|\\brohit\\b|\\brohit\\ sharma\\b|\\bsharma\\b|\\bspacex\\b|\\btesla\\b|\\bnature\\b|\\biphone\\b|\\bimac\\b|\\bapple\\b)"
-  }
-]
