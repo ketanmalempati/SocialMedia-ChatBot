@@ -1,0 +1,6 @@
+[
+  {
+    "name": "item",
+    "pattern": "(\\bvirat\\b|\\bvirat\\ kohli\\b|\\bkohli\\b|\\brohit\\b|\\brohit\\ sharma\\b|\\bsharma\\b|\\bspacex\\b|\\btesla\\b|\\bnature\\b|\\biphone\\b|\\bimac\\b|\\bapple\\b|\\bAlex\\b|\\bpeter\\b|\\bderek\\b|\\bbrain\\b|\\bclark\\b|\\bstoinis\\b|\\bbavuma\\b|\\bstuart\\b|\\bmari\\b|\\bgold\\b|\\bsky\\b|\\bblue\\b|\\bhigh\\b|\\blove\\b|\\blight\\b|\\bsun\\b|\\bwest\\b|\\beast\\b)"
+  }
+]
