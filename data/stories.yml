@@ -50,7 +50,7 @@ stories:
   steps:
   - intent: elon
   - action: utter_elon
-  - action: action_elon_tweets
+  - action: action_show_media
   - action: utter_related_elon
   - intent: spacex
   - action: utter_spacex
@@ -61,7 +61,7 @@ stories:
   steps:
   - intent: elon
   - action: utter_elon
-  - action: action_elon_tweets
+  - action: action_show_media
   - action: utter_related_elon
   - intent: tesla
   - action: utter_tesla
@@ -72,7 +72,7 @@ stories:
   steps:
   - intent: cook
   - action: utter_cook
-  - action: action_cook_tweets
+  - action: action_show_media
   - action: utter_related_cook
   - intent: phone
   - action: utter_phone
@@ -82,7 +82,7 @@ stories:
   steps:
   - intent: cook
   - action: utter_cook
-  - action: action_cook_tweets
+  - action: action_show_media
   - action: utter_related_cook
   - intent: mac
   - action: utter_mac
@@ -99,7 +99,7 @@ stories:
   steps:
   - intent: cricket
   - action: utter_cricket
-  - action: action_cricket_media
+  - action: action_show_media
   - action: utter_related_cricket
   - intent: icc
   - action: utter_icc
@@ -110,28 +110,51 @@ stories:
   steps:
   - intent: cricket
   - action: utter_cricket
-  - action: action_cricket_media
+  - action: action_show_media
   - action: utter_related_cricket
   - intent: bcci
   - action: utter_bcci
   - action: action_show_media
 
+- story: ai path1
+  steps:
+  - intent: AI
+  - action: utter_ai
+  - action: action_show_media
+  - action: utter_related_ai
+  - intent: NLP
+  - action: utter_nlp
+  - action: action_show_media
 
-# - story: path about tweet
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: give_tweets
-#   - action: action_show_tweets
+- story: ai path2
+  steps:
+  - intent: AI
+  - action: utter_ai
+  - action: action_show_media
+  - action: utter_related_ai
+  - intent: CV
+  - action: utter_cv
+  - action: action_show_media
 
+- story: sports path1
+  steps:
+  - intent: sports
+  - action: utter_sports
+  - action: action_show_media
+  - action: utter_related_sports
+  - intent: football
+  - action: utter_football
+  - action: action_show_media
 
-# - story: path about video
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: give_videos
-#   - action: action_show_videos
-
+- story: sports path2
+  steps:
+  - intent: sports
+  - action: utter_sports
+  - action: action_show_media
+  - action: utter_related_sports
+  - intent: tennis
+  - action: utter_tennis
+  - action: action_show_media
 
 - story: interactive_story_1
   steps:
@@ -378,7 +401,7 @@ stories:
   - action: utter_greet
   - intent: cricket
   - action: utter_cricket
-  - action: action_cricket_media
+  - action: action_show_media
   - action: utter_related_cricket
   - intent: bcci
   - action: utter_bcci
@@ -386,3 +409,16 @@ stories:
   - intent: icc
   - action: utter_icc
   - action: action_show_media
+
+- story: interactive_story_1
+  steps:
+  - intent: sports
+  - action: utter_sports
+  - action: action_show_media
+  - action: utter_related_sports
+  - intent: football
+  - action: utter_football
+  - action: action_show_media
+  - intent: search
+  - action: utter_search
+  - action: action_show_search

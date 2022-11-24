@@ -270,3 +270,40 @@ nlu:
     - please stop
     - i want to stop
     - stop the form
+- intent: AI
+  examples: |
+    - can I get some details on artificial intelligence?
+    - can I get details on artificial intelligence?
+    - artificial intelligence
+    - ai
+- intent: NLP
+  examples: |
+    - can I get some details on natural language processing?
+    - can I get details on natural language processing?
+    - natural language processing
+    - nlp
+- intent: CV
+  examples: |
+    - can I get some details on computer vision?
+    - can I get details on computer vision?
+    - computer vision
+    - cv
+- intent: sports
+  examples: |
+    - can I get some details on sports?
+    - can I get details on sport?
+    - sports
+    - sport
+    - details on sports
+- intent: football
+  examples: |
+    - can I get some details on football?
+    - can I get details on football?
+    - football
+    - foot ball
+    - details on football
+- intent: tennis
+  examples: |
+    - can I get some details on tennis?
+    - can I get details on tennis?
+    - tennis

@@ -12,17 +12,6 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-# - rule: Tell the tweets
-#   steps:
-#   - intent: give_tweets
-#   - action: action_show_tweets
-
-
-
-# - rule: Show the videos
-#   steps:
-#   - intent: give_videos
-#   - action: action_show_videos
 - rule: search
   steps:
   - intent: search
@@ -70,6 +59,18 @@ rules:
   steps:
   - intent: bcci
   - action: utter_bcci
+  - action: action_show_media
+
+- rule: nlp
+  steps:
+  - intent: NLP
+  - action: utter_nlp
+  - action: action_show_media
+
+- rule: cv
+  steps:
+  - intent: CV
+  - action: utter_cv
   - action: action_show_media
 
 - rule: Activate Media Form
