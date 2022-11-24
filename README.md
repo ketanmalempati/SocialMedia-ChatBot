@@ -1,4 +1,4 @@
-# SocialMedia-ChatBot
+# CMPE-252 SocialMedia-ChatBot
 One stop solution to all social media
 
 ## Motivation
