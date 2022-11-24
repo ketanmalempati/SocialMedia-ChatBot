@@ -1,5 +1,8 @@
 version: '3.1'
 intents:
+- AI
+- CV
+- NLP
 - affirm
 - ask_media
 - bcci
@@ -9,6 +12,7 @@ intents:
 - deletesearch
 - deny
 - elon
+- football
 - give_time
 - goodbye
 - greet
@@ -22,7 +26,9 @@ intents:
 - request_media_form
 - search
 - spacex
+- sports
 - stop
+- tennis
 - tesla
 - vada
 entities:
@@ -55,10 +61,7 @@ forms:
     - media_type
     - media_text
 actions:
-- action_cook_tweets
-- action_cricket_media
 - action_delete_search
-- action_elon_tweets
 - action_show_media
 - action_show_posts
 - action_show_search
@@ -67,10 +70,14 @@ actions:
 - utter_ask_media_text
 - utter_bcci
 - utter_cricket
+- utter_football
 - utter_greet
 - utter_icc
 - utter_media_slots
 - utter_related_cricket
+- utter_related_sports
+- utter_search
+- utter_sports
 - utter_submit
 - validate_simple_media_form
 responses:
@@ -115,7 +122,28 @@ responses:
       Here are the things related to Cricket 
        (1) ICC 
        (2) BCCI
-       (3) IPL
+  utter_ai:
+  - text: 'Recent Tweets and videos on Artificial Intelligence: '
+  utter_related_ai:
+  - text: |-
+      Here are the things related to Artificial Intelligence 
+       (1) NLP 
+       (2) CV
+  utter_nlp:
+  - text: Here are the recent tweets and videos on NLP
+  utter_cv:
+  - text: Here are the recent tweets and videos on CV
+  utter_sports:
+  - text: 'Recent Tweets and videos on Sports: '
+  utter_related_sports:
+  - text: |-
+      Here are the things related to Sports
+       (1) Football
+       (2) Tennis
+  utter_football:
+  - text: Here are the recent tweets and videos on Football
+  utter_tennis:
+  - text: Here are the recent tweets and videos on Tennis
   utter_spacex:
   - text: Here are the recent tweets and videos on SpaceX
   utter_phone:
