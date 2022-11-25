@@ -196,14 +196,17 @@ nlu:
     - [1](media_size)
     - [youtube](media_type) [nature](media_text)
     - give me a [youtube](media_type) videos on [nature](media_text)
+    - give me a [youtube](media_type) videos on [beaches](media_text)
     - [twitter](media_type) posts on [England](media_text)
     - [3](media_size)
     - [youtube](media_type) [England](media_text)
     - i want a [3](media_size) posts on [Australia](media_text)
     - [twitter](media_type) [Australia](media_text)
+    - [twitter](media_type) [beaches](media_text)
     - [youtube](media_type) [PCB](media_text)
     - [twitter](media_type) [BCCI](media_text)
     - [youtube](media_type) [RCB](media_text)
+    - [youtube](media_type) [beaches](media_text)
     - i want a [3](media_size) posts
     - [youtube](media_type)
     - [twitter](media_type)
@@ -214,6 +217,7 @@ nlu:
     - [England](media_text)
     - [Cricket](media_text)
     - [nature](media_text)
+    - [beaches](media_text)
     - i want [3](media_size) posts
     - on [nature](media_text)
     - [Tweets](media_type) on [Virat Kohli](media_text)
@@ -246,6 +250,8 @@ nlu:
     - [3](media_size) [twitter](media_type) posts on [england](media_text)
     - i want [3](media_size) [videos](media_type) on [england](media_text)
     - [3](media_size) [videos](media_type) on [england](media_text)
+    - i want [videos](media_type) on [nature](media_text)
+    - [3](media_size)
 - intent: search
   examples: |
     - i want to see my searches
