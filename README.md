@@ -12,24 +12,71 @@ So this chatbot will send results of only the things you wanted to search.
 - Run `rasa train` after ever change made before running
 - After training run `rasa shell` or `rasa interactive` if you want to run in terminal
 - Use `rasa run` if you have connected it to slack and you can start the conversation in slack
+- In a new terminal run `rasa run actions` so you can connect to APIs
 ## Conversation Flows
 ### Single Conversations
+ 1. - **User Input** : Virat Kohli
+    - **Bot Reply** : He is the G.O.A.T  
+                      *Also adds an image of him*  
+ 2. - **User Input** : What time is it?
+    - **Bot Reply** : It is `current time`
+ 3. - **User Input** : Can I get some details on football?
+    - **Bot Reply** : Here are the recent tweets and videos on football  *3 tweets and 3 vidos on tesla are sent*
+
 
 ### Multi-turn Conversations
+ 1. - **User Input** : Can I have details on Elon musk?
+    - **Bot Reply** : Recent Tweets and videos on Elon Musk: *Attaches 3 tweets and 3 videos on Elon Musk*
+    - **Bot Reply** : Here are the things related to Elon Musk (1) SpaceX (2) Tesla
+    - **User Input** : SpaceX
+    - **Bot Reply** : Recent Tweets and videos on SpaceX: *Attaches 3 tweets and 3 videos on SpaceX*
+ 2. - **User Input** : Details on Sports?
+    - **Bot Reply** : Recent Tweets and videos on Sports: *Attaches 3 tweets and 3 videos on sports*
+    - **Bot Reply** : Here are the things related to Sports (1) Football (2) Tennis
+    - **User Input** : Tennis
+    - **Bot Reply** : Recent Tweets and videos on Tennis: *Attaches 3 tweets and 3 videos on Tennis*
+ 3. - **User Input** : About Tim Cook?
+    - **Bot Reply** : Recent Tweets and videos on Tim Cook: *Attaches 3 tweets and 3 videos on Tim Cook*
+    - **Bot Reply** : Here are the things related to Tim Cook (1) Iphone (2) MacBook
+    - **User Input** : Details on Iphone
+    - **Bot Reply** : Recent Tweets and videos on Iphone: *Attaches 3 tweets and 3 videos on Iphone*
+ 4. - **User Input** : Can I have details on Artificial Intelligence?
+    - **Bot Reply** : Recent Tweets and videos on Artificial Intelligence: *Attaches 3 tweets and 3 videos on Artificial Intelligence*
+    - **Bot Reply** : Here are the things related to Artificial Intelligence (1) NLP (2) CV
+    - **User Input** : CV
+    - **Bot Reply** : Recent Tweets and videos on CV: *Attaches 3 tweets and 3 videos on CV*
 
 ### Slots Filling Conversation
+ 1. - **User Input** : I want 3 videos on Nature
+    - **Bot Reply** : I will now send posts for you!
+    - **Bot Reply** : I will send 3 videos post on nature.
+    - **Bot Reply** : *Adds 3 video links on nature*
+ 2. - **User Input** : I want 5 tweets on England
+    - **Bot Reply** : I will now send posts for you!
+    - **Bot Reply** : I will send 5 videos post on England.
+    - **Bot Reply** : *Adds 5 tweet links on England*
+ 3. - **User Input** : I want tweets
+    - **Bot Reply** : OK! You want to have posts from tweets.      
+    - **Bot Reply** : How many posts do you want?  
+    - **User Input** : I want 7
+    - **Bot Reply** : OK! You want to have a 7 posts.
+    - **Bot Reply** : On what topic would you like to see?
+    - **User Input** : I want posts on Beaches
+    - **Bot Reply** : I will send 7 tweets on Beaches
+    - **Bot Reply** : *Adds 7 tweet links on Beaches*
 
 ### Database usage Conversations
-
+ 1. - **User Input** : Show me my search history
+    - **Bot Reply** : Sending your search history *(It will display the search history by pulling data from database)*
+ 2. - **User Input** : Delete my search history
+    - **Bot Reply** : Deleting your search history *(It will delete the search history from the table in the database)*
 
 ## Future Improvements
 - Make it more generic
 - Add more social media
 
-
 ## Conclusion
 It was a fun project to work on. 
-
 
 ## References
 - https://rasa.com/docs/rasa/installation/environment-set-up/
