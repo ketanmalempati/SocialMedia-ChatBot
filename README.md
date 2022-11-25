@@ -73,7 +73,7 @@ We spend lot of time using social media and potentially waste our time. Even tho
 
 ## Future Improvements
 - Make it more generic
-- Add more social media  
+- Add more social media platforms
 
 ## Conclusion
 It was a fun project to work on.   
