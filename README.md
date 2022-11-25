@@ -77,6 +77,7 @@ We spend lot of time using social media and potentially waste our time. Even tho
 ## Challenges faced
 - Trying to run actions for the first time was very difficult as I made made mistakes in port number.
 - Adding the bot to slack for a little tedious process.
+- Add Translations to other languages.
 ## Conclusion
 It was a fun project to work on.   
 
