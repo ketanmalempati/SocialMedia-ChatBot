@@ -73,8 +73,10 @@ We spend lot of time using social media and potentially waste our time. Even tho
 
 ## Future Improvements
 - Make it more generic
-- Add more social media platforms
-
+- Add more social media platforms  
+## Challenges faced
+- Trying to run actions for the first time was very difficult as I made made mistakes in port number.
+- Adding the bot to slack for a little tedious process.
 ## Conclusion
 It was a fun project to work on.   
 
