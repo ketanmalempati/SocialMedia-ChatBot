@@ -422,3 +422,23 @@ stories:
   - intent: search
   - action: utter_search
   - action: action_show_search
+
+- story: interactive_story_1
+  steps:
+  - intent: inform
+    entities:
+    - media_type: videos
+    - media_text: nature
+  - slot_was_set:
+    - media_type: videos
+  - slot_was_set:
+    - media_text: nature
+  - action: utter_ask_media_size
+  - intent: inform
+    entities:
+    - media_size: '3'
+  - slot_was_set:
+    - media_size: '3'
+  - action: utter_submit
+  - action: utter_media_slots
+  - action: action_show_posts

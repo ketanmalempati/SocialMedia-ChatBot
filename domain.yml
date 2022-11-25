@@ -32,8 +32,8 @@ intents:
 - tesla
 - vada
 entities:
-- media_text
 - media_type
+- media_text
 - media_size
 slots:
   media_size:
@@ -67,6 +67,7 @@ actions:
 - action_show_search
 - action_show_time
 - utter_ask_continue
+- utter_ask_media_size
 - utter_ask_media_text
 - utter_bcci
 - utter_cricket
