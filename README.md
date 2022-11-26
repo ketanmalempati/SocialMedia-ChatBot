@@ -72,12 +72,14 @@ We spend lot of time using social media and potentially waste our time. Even tho
     - **Bot Reply** : Deleting your search history *(It will delete the search history from the table in the database)*  
 
 ## Future Improvements
-- Make it more generic
-- Add more social media platforms  
+- Make it more generic to detect Proper Noun better.
+- Add more social media platforms  .
+- Add Translations to other languages.
+- Add Feedback Form.
 ## Challenges faced
+- Entity detection was difficult.
 - Trying to run actions for the first time was very difficult as I made made mistakes in port number.
 - Adding the bot to slack for a little tedious process.
-- Add Translations to other languages.
 ## Conclusion
 It was a fun project to work on.   
 
