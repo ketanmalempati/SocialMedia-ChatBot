@@ -21,7 +21,7 @@ We spend lot of time using social media and potentially waste our time. Even tho
     - **Bot Reply** : `current time`
  3. - **User Input** : Can I get some details on football?
     - **Bot Reply** : Here are the recent tweets and videos on football  
-    - **Bot Reply** : *3 tweets and 3 video links on tesla*  
+    - **Bot Reply** : *3 tweets and 3 video links on football*  
 
 
 - **Multi-turn Conversations**
