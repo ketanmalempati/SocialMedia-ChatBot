@@ -21,7 +21,7 @@ We spend lot of time using social media and potentially waste our time. Even tho
     - **Bot Reply** : `current time`
  3. - **User Input** : Can I get some details on football?
     - **Bot Reply** : Here are the recent tweets and videos on football  
-    - **Bot Reply** : *3 tweets and 3 video links on tesla*  
+    - **Bot Reply** : *3 tweets and 3 video links on football*  
 
 
 - **Multi-turn Conversations**
@@ -86,7 +86,6 @@ This saves time by avoiding switching from one social media platform to another 
 I learned a lot of things, such as how to build a conservational AI chatbot and how to manage my time.
 During class and office hours, I was able to learn a lot from the ISAs.
 Overall, it was an enjoyable project to work on.
-
 ## References
 - https://rasa.com/docs/rasa/installation/environment-set-up/
 - https://www.youtube.com/watch?v=2Qu4LCvB4bs&t=456s
