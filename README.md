@@ -81,11 +81,11 @@ We spend lot of time using social media and potentially waste our time. Even tho
 - Trying to run actions for the first time was very difficult as I made made mistakes in port number.
 - Adding the bot to slack for a little tedious process.
 ## Conclusion
-This project pulls a number of posts of the topics you specify from the social media platforms you choose or all available.
-This saves time by avoiding switching from one social media platform to another and becoming distracted in the process.
-I learned a lot of things, such as how to build a conservational AI chatbot and how to manage my time.
-During class and office hours, I was able to learn a lot from the ISAs.
-Overall, it was an enjoyable project to work on.
+This project pulls a number of posts of the topics you specify from the social media platforms you choose or all available.  
+This saves time by avoiding switching from one social media platform to another and becoming distracted in the process.  
+I learned a lot of things, such as how to build a conservational AI chatbot and how to manage my time.  
+During class and office hours, I was able to learn a lot from the ISAs.  
+Overall, it was an enjoyable project to work on.  
 ## References
 - https://rasa.com/docs/rasa/installation/environment-set-up/
 - https://www.youtube.com/watch?v=2Qu4LCvB4bs&t=456s
