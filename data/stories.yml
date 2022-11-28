@@ -442,3 +442,28 @@ stories:
   - action: utter_submit
   - action: utter_media_slots
   - action: action_show_posts
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tennis
+  - action: utter_tennis
+  - action: action_show_media
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tennis
+  - action: utter_tennis
+  - action: action_show_media
+  - intent: search
+  - action: utter_search
+  - action: action_show_search
+  - intent: deletesearch
+  - action: utter_deletesearch
+  - action: action_delete_search
+  - intent: search
+  - action: utter_search
+  - action: action_show_search

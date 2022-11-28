@@ -251,7 +251,6 @@ nlu:
     - i want [3](media_size) [videos](media_type) on [england](media_text)
     - [3](media_size) [videos](media_type) on [england](media_text)
     - i want [videos](media_type) on [nature](media_text)
-    - [3](media_size)
 - intent: search
   examples: |
     - i want to see my searches
@@ -260,6 +259,8 @@ nlu:
     - search
     - search history
     - my history
+    - i want to see my search history
+    - I want to see my search history
 - intent: deletesearch
   examples: |
     - i want to delete my searches
@@ -269,6 +270,7 @@ nlu:
     - deleted history
     - delete history
     - delete my history
+    - delete my search history
 - intent: stop
   examples: |
     - stop
@@ -313,3 +315,4 @@ nlu:
     - can I get some details on tennis?
     - can I get details on tennis?
     - tennis
+    - details on tennis

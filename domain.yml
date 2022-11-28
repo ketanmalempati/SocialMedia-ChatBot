@@ -71,6 +71,7 @@ actions:
 - utter_ask_media_text
 - utter_bcci
 - utter_cricket
+- utter_deletesearch
 - utter_football
 - utter_greet
 - utter_icc
@@ -80,6 +81,7 @@ actions:
 - utter_search
 - utter_sports
 - utter_submit
+- utter_tennis
 - validate_simple_media_form
 responses:
   utter_greet:
