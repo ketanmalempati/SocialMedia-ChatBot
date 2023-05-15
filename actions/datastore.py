@@ -4,8 +4,8 @@ import datetime as dt
 def DataUpdate(size,type,text):
     mydb = mysql.connector.connect(
         host="localhost",
-        user="root",
-        passwd="root",
+        user="user",
+        passwd="passwd",
         database="slots_store",auth_plugin='mysql_native_password'
     )
     if(type=='tweets' or type=='tweet' or type=='twitter'):
@@ -23,8 +23,8 @@ def DataUpdate(size,type,text):
 def SearchHistory():
     mydb = mysql.connector.connect(
         host="localhost",
-        user="root",
-        passwd="root",
+        user="user",
+        passwd="passwd",
         database="slots_store",auth_plugin='mysql_native_password'
     )
     mycursor = mydb.cursor(buffered=True)
@@ -50,8 +50,8 @@ def SearchHistory():
 def DeleteHistory():
     mydb = mysql.connector.connect(
         host="localhost",
-        user="root",
-        passwd="root",
+        user="user",
+        passwd="passwd",
         database="slots_store",auth_plugin='mysql_native_password'
     )
     mycursor = mydb.cursor(buffered=True)
