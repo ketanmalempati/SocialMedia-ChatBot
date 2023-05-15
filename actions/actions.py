@@ -23,13 +23,13 @@ from googletrans import Translator
 import tweepy
 from googleapiclient.discovery import build
 
-clientid = "K3zFmMUSZ-maPz8s9TokiQs0V9NtTv-MpzkFVLPmUWTGJHznU_"
-consumer_key = "hed40uwwO3yBYozPwJ6TIZDJD"
-consumer_secret = "govduaChw5C5z05GLzZHCNkJImvyRvjJ1DImKty7ygYNEnndkp"
-bearertoken = "AAAAAAAAAAAAAAAAAAAAAOfYYgEAAAAAaCY0M6qX9qgapv0Bk%2BvUvC9RDdE%3DbaEvNrXnooc2FQGjtso9qFwUS0YPKXQwiQUz0JvxwREvpA79Bn"
-access_token ="792344353024856068-jLbPMxdgTQ9jeHonhbE6nqbp7uvYNQ8"
-access_token_secret = "W70yP0eM5mKy9pBL4cYZAa7U8Mfd17PuJ86eI1sO7AUZC"
-bearer_token = "AAAAAAAAAAAAAAAAAAAAAOfYYgEAAAAAaCY0M6qX9qgapv0Bk%2BvUvC9RDdE%3DbaEvNrXnooc2FQGjtso9qFwUS0YPKXQwiQUz0JvxwREvpA79Bn"
+clientid = "clientid"
+consumer_key = "consumer_key"
+consumer_secret = "consumer_secret"
+bearertoken = "bearertoken"
+access_token ="access_token"
+access_token_secret = "access_token_secret"
+bearer_token = "bearer_token"
 auth = tweepy.OAuth1UserHandler(consumer_key, consumer_secret, access_token, access_token_secret)
 api = tweepy.API(auth)
 
@@ -64,7 +64,7 @@ class ActionShowVideos(Action):
                 s+="\nhttps://twitter.com/twitter/statuses/"+str(i.id)
             DataUpdate(len(tweets),"Twitter",message)
 
-            youtube_api_key = 'AIzaSyCB0RoVJ0ml1cpUbM6GBePuxw8oUYA4Llk'
+            youtube_api_key = 'youtube_api_key'
 
             youtube = build('youtube','v3',developerKey=youtube_api_key)
             request = youtube.search().list(
@@ -154,7 +154,7 @@ class ActionShowVideos(Action):
 
             if(media_type=='youtube' or media_type=='videos' or media_type=='video'):
 
-                youtube_api_key = 'AIzaSyCB0RoVJ0ml1cpUbM6GBePuxw8oUYA4Llk'
+                youtube_api_key = 'youtube_api_key'
 
                 youtube = build('youtube','v3',developerKey=youtube_api_key)
                 request = youtube.search().list(
